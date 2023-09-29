@@ -1,24 +1,24 @@
 #!/usr/bin/python3
 """
-Code defines a function that returns a list of lists of integers that represents the Pascal's triangle of y
+This code defines function that returns a list of lists of integers that represents the Pascal's triangle of n
 """
 
 
 def pascal_triangle(n):
     """
     parameters that will be used:
-    y [int]: Pascal triangle rows that will be created
+    n [int]: Pascal triangle rows that will be created
 
     to return:
         [list of lists of integers]: this represents the Pascal's triangle
     """
-    if type(y) is not int:
-        raise TypeError("y is an integer")
+    if type(n) is not int:
+        raise TypeError("n is an integer")
     triangle = []
-    if y <= 0:
+    if n <= 0:
         return triangle
     previous = [1]
-    for row_index in range(y):
+    for row_index in range(n):
         rowlist = []
         if row_index == 0:
             rowlist = [1]
